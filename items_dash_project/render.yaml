@@ -1,11 +1,21 @@
 services:
   - type: web
-    name: django-api
+    name: items-dash-app
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn ./items_dash_project.wsgi:application
+    region: oregon
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py migrate
+      python manage.py collectstatic --noinput
+    startCommand: gunicorn items_dash_project.wsgi:application
     envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: items_dash_project.settings
       - key: DATABASE_URL
         value: mysql://root:EFsdsQSYtYviQgYQzqRVrqqWGFxzJyfp@switchback.proxy.rlwy.net:49641/railway
       - key: SECRET_KEY
         value: EFsdsQSYtYviQgYQzqRVrqqWGFxzJyfp
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: "render.com"
