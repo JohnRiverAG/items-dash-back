@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-i*1@56+te^b2l*#p=+8p&aiha7niq3@v@cn2@^)9awmq%ll5b+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://items-dash-back.onrender.com/']
 
 
 # Application definition
