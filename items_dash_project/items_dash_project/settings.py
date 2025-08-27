@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-i*1@56+te^b2l*#p=+8p&aiha7niq3@v@cn2@^)9awmq%ll5b+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -55,7 +55,7 @@ MIDDLEWARE = [
 
 MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
 
-CORS_ALLOW_ALL_ORIGINS = False  # Para desarrollo
+CORS_ALLOW_ALL_ORIGINS = True  # Para desarrollo
 
 ALLOWED_HOSTS = ['render.com', 'items-dash-back.onrender.com']
 
