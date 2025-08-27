@@ -57,7 +57,7 @@ MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
 
 CORS_ALLOW_ALL_ORIGINS = False  # Para desarrollo
 
-ALLOWED_HOSTS = ['render.com', 'intems_dash_project.onrender.com']
+ALLOWED_HOSTS = ['render.com', 'items-dash-back.onrender.com']
 
 ROOT_URLCONF = 'items_dash_project.urls'
 
